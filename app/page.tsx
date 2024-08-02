@@ -43,7 +43,7 @@ export default function Home({ searchParams }: any) {
       <Search onChange={handleChange} value={search} />
       <div className="flex flex-wrap gap-2 justify-center mt-10">
         {data.items.length > 0 ? (
-          data.items.map((item) => <PokemonItem {...item} />)
+          data.items.map((item) => <PokemonItem key={item.id} {...item} />)
         ) : (
           <h3>Not found</h3>
         )}
